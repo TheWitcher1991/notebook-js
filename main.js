@@ -7,7 +7,6 @@ if (require.main !== module) {
 }
 
 const path = require('path')
-const glob = require('glob')
 const {app, BrowserWindow} = require('electron')
 
 const debug = /--debug/.test(process.argv[2])
@@ -17,9 +16,7 @@ if (process.mas) app.setName('NoteBook-js')
 let mainWindow = null
 
 function initialize () {
-
-    loadDemos()
-
+    
     function createWindow () {
         const windowOptions = {
             width: 768,
@@ -61,11 +58,6 @@ function initialize () {
     app.on('activate', () => {
         if (mainWindow === null) createWindow()
     })
-}
-
-function loadDemos () {
-    const files = glob.sync(path.join(__dirname, 'public/components/**/*.js'))
-    files.forEach((file) => {require(file)})
 }
 
 initialize()
