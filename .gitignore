@@ -1,0 +1,6 @@
+node_modules
+build
+.dist
+*.[oa]
+*.txt
+package-lock.json

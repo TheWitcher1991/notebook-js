@@ -1,0 +1,44 @@
+{
+  "name": "notebook",
+  "version": "1.0.0",
+  "description": "NoteBook on javascript",
+  "main": "main.js",
+  "bin": "cli.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --debug",
+    "test": "mocha && standard",
+    "package": "npm-run-all package:*",
+    "package:win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --out=build --icon=assets/app-icon/win/app.ico",
+    "package:linux": "electron-packager . --overwrite --platform=linux --arch=x64 --out=build"
+  },
+  "author": "Ashot Svazyan <ashot.svazyan222@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheWitcher1991/notebook-js"
+  },
+  "standard": {
+    "env": {
+      "mocha": true
+    }
+  },
+  "devDependencies": {
+    "devtron": "^1.4.0",
+    "electron": "^6.0.2",
+    "electron-packager": "^14.0.4",
+    "electron-winstaller": "^4.0.0",
+    "glob": "^7.1.4",
+    "jquery": "^3.4.1",
+    "mocha": "^6.2.0",
+    "npm-run-all": "^4.1.5",
+    "standard": "^13.1.0"
+  },
+  "dependencies": {
+    "electron-log": "^3.0.7",
+    "electron-settings": "^3.2.0",
+    "electron-shortcut-normalizer": "^1.0.0",
+    "update-electron-app": "^1.5.0"
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Блокнот</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/3.9.97/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" />
+</head>
+<body>
+
+    <main id="wrapper">
+
+        <section id="menu-app">
+            <div id="bars-app">
+                <div class="bra">
+                    <i class="fas fa-bars open"></i>
+                    <h1>Ваши заметки</h1>
+                </div>
+                <div id="add-task"> 
+                    <h1><i style="font-size: 13px;margin: 0 6px 0 0px;" class="fas fa-plus"></i> добавить</h1>
+                </div>
+            </div> 
+        </section>
+
+        <nav id="menu-block">
+            <ul>
+                <li style="border-bottom: 1px solid rgba(0,0,0,0.1);display: flex;justify-content: space-between;align-items: center;" id="menu">Меню<i class="close" style="font-size: 22px;cursor: pointer;">&times;</i></li>
+                <li style="padding: 10px 16px;cursor: pointer;" id="important">Важные</li> 
+                <li style="padding: 10px 16px;cursor: pointer;" id="fihish">Сделанные</li>
+                <!-- <li style="padding: 0" id="themes">
+                    <div style="padding: 10px 16px;display: flex;justify-content: space-between;align-items: center;">Темы <i style="font-size: 14px;cursor: pointer;transition: all 0.2s;" class="fas fa-chevron-down th-open"></i></div>
+                    <ul style="background: rgb(37, 47, 57)" class="theme-list">
+                        <li id="dark" style="padding: 7px 30px">Темная</li>
+                        <li id="light" style="padding: 7px 30px">Светлая</li>
+                    </ul>
+                </li> -->
+            </ul>
+        </nav>
+
+        <div id="form">
+            <form id="add-app">
+                <textarea type="text" style="height: 120px" id="add-in" placeholder="Текст заметки..."></textarea>
+                <input type="button" id="add-but" value="добавить">
+            </form>
+            <div class="close-form">
+                Закрыть
+            </div>
+        </div>
+
+        <section id="main-app" style="margin: 100px 0 40px 0;">
+            <div id="wrapper-todo">
+                <ul class="todo" id="todo">
+                </ul>
+            </div>
+        </section>
+
+        <section id="fihish-block">
+            <div style="max-width: 590px;max-width: 590px;margin: 20px auto 0 auto;" class="tit">
+                Сделанные
+            </div>
+            <ul id="fihish-ul">
+    
+            </ul>
+            <div style="max-width: 590px" class="close-fih">
+                Закрыть
+            </div>
+        </section>
+
+        <section id="imp-block">
+            <div style="max-width: 590px;max-width: 590px;margin: 20px auto 0 auto;" class="tit">
+                Важные
+            </div>
+            <ul id="imp-ul">
+
+            </ul>
+            <div style="max-width: 590px" class="close-imp">
+                Закрыть
+            </div>
+        </section>
+
+        <section id="themes-block"></section>
+
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script>
+        $('#add-task').on('click',()=>{$('#form').fadeIn(300);});$('.close-form').on('click',()=>{$('#form').fadeOut(300);});$('.open').on('click',()=>{$('#menu-block').fadeIn(300);});$('.close').on('click',()=>{$('#menu-block').fadeOut(300);});$('#fihish').on('click',()=>{$('#fihish-block').fadeIn(300);});$('.close-fih').on('click',()=>{$('#fihish-block').fadeOut(300);});$('#important').on('click',()=>{$('#imp-block').fadeIn(300);});$('.close-imp').on('click',()=>{$('#imp-block').fadeOut(300);});$('#wrapper-todo').css({'margin':'0 auto','max-width':'590px'});$('.th-open').on('click',()=>{$('.theme-list').fadeToggle(200);$('.th-open').toggleClass('is-active');})
+        /* TODO: $('#light').on('click', () => {
+            $('body, html').css({'background':'rgb(248, 250, 255)'});
+            $('.bra > h1').css({'color': 'rgb(69, 84, 115)'});
+            $('.bra > i').css({'color': 'rgb(0, 104, 171)'});
+            $('.text').css({
+                'background': 'rgb(236, 242, 251)',
+                'border': '1px solid rgb(223, 223, 223)',
+                'color': '#333'
+            })
+            $('.list').css({'background': '#fff','boxShadow':'0 4px 15px 0 rgba(88,106,153,0.2)'})
+            $('#menu-app').css({'background':'#fff','boxShadow':'0 4px 15px 0 rgba(88,106,153,0.2)'});
+            $('.theme-list').css({'background':'#fff'});
+            $('#menu-block > ul').css({'background':'#fff','borderRight':'10px solid rgb(0, 164, 255)'});
+            $('#menu').css({'borderBottom':'1px solid rgba(0, 0, 0, 0.35)'});
+            $('#menu-block').css({'color':'rgb(0, 164, 255)'})
+        })*/
+    </script>
+</body>
+</html>

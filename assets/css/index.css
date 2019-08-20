@@ -1,0 +1,423 @@
+@charset "UTF-8";
+
+/* 1. NORMALINE */
+/* ============================================================================================================== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 105, 173);
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(37, 47, 57);
+}
+
+article, aside, details, main, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+ul, menu {
+    list-style: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font: normal 16px "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    background: rgb(28, 38, 47);
+    color: rgb(222, 229, 242);
+    /* overflow-x: hidden; */
+}
+
+/* 2. FORM */
+/* ============================================================================================================== */
+textarea {
+    outline: none;
+    resize: none;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+    outline: none;
+    border: none;
+}
+
+#add-in {
+    border-left: 2px solid rgb(0, 104, 171);
+    border-top: 2px solid rgb(0, 104, 171);
+    border-bottom: 2px solid rgb(0, 104, 171);
+    border-right: none;
+    background: rgb(48, 57, 67);
+    transition: all 0.3s ease;
+    padding: 11px;
+    margin: 0;
+    color: rgb(232, 233, 234);
+    width: 100%;
+    border-radius: 2px 0 0 2px;
+}
+
+.checkbox {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    opacity: 0;
+}
+
+.iconic > input[type="checkbox"] + .go:before {
+    content: "\f005";
+    width: .93em;
+    display: inline-block;
+    font: normal normal normal 18px/1 "Font Awesome 5 Free";
+    font-size: inherit;
+    text-rendering: auto;
+    line-height: 1;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    width: auto !important;
+    content: 'checkbox';
+    content: '\f005';
+}
+
+.iconic > input[type="checkbox"]:checked + .go:before {
+    content: "\f005";
+    width: .93em;
+    display: inline-block;
+    font: normal normal normal 18px/1 "Font Awesome 5 Free";
+    font-size: inherit;
+    text-rendering: auto;
+    font-weight: 900;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    width: auto !important;
+    content: 'checkbox-checked';
+    content: '\f005';
+}
+
+  /* 3. BUTTON */
+/* ============================================================================================================== */
+button, input[type="button"], input[type="submit"] {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#add-but {
+    background: rgb(0, 104, 171);
+    border-radius: 0 4px 4px 0;
+    color: rgb(255, 255, 255);
+    padding: 12px 12px 13px 12px;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease
+}
+
+#add-but:hover, .close-form:hover, .close-fih {
+    background: rgb(0, 93, 153);
+}
+
+#add-but:hover #add-in {
+    border-color: rgb(0, 93, 153);
+}
+
+#check_important::after {
+    content: 'Пометить как важное';
+}
+
+#check_important, #check_fihish, #check_back {
+    transition:all 0.3s ease-in-out;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background: rgb(0, 104, 171);
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+#check_basket {
+    margin: 0px 0 0 119px;
+}
+
+#check_fihish {
+    margin: 0px 0 0 94px;
+}
+
+#check_important:hover, #check_fihish:hover, #check_back:hover {
+    background: rgb(0, 93, 153);
+}
+
+#check_basket::after {
+    content: 'Удалить';
+}
+
+#check_fihish::after {
+    content: 'Сделано'
+}
+
+#check_basket {
+    border-radius: 4px;
+    transition:all 0.3s ease-in-out;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    color: rgb(255, 255, 255);
+    background: rgba(248, 6, 6, 0.582);
+    font-family: 'Roboto', sans-serif;
+}
+
+#check_basket:hover{
+    background:rgba(248, 6, 6, 0.904);
+}
+
+/* 4. MAIN */
+/* ============================================================================================================== */
+#wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* 5. HEADER */
+/* ============================================================================================================== */
+.bra {
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+
+.bra > i {
+    color: rgb(140, 156, 189);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.bra > i:hover {
+    color: rgb(159, 172, 198);
+}
+
+.bra > h1 {
+    margin: 0 0 0 15px;
+    color: rgb(232, 233, 234);
+}
+
+#bars-app {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#add-task {
+    padding: 0 16px 0 0;
+}
+
+#add-task > h1 {
+    background: rgb(0, 104, 171);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 200;
+    cursor: pointer;
+    font-size: 17px;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+#menu-block {
+    position: absolute;
+    left: 0;
+    display: none;
+    top: 0;
+    font-weight: 100;
+    width: 100%;
+    /* width: 270px; */
+    font-size: 19px;
+    background: rgba(0, 0, 0, 0.48);
+    height: 100%;
+    /* border-right: 10px solid rgb(40, 53, 66); */
+    /* box-shadow: 2px 0 5px 0 rgba(0,0,0,0.25); */
+    color: rgb(184, 196, 224);
+}
+
+#menu-block > ul {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 300px;
+    border-right: 10px solid rgb(40, 53, 66);
+    background: rgb(37, 47, 57);
+    box-shadow: 2px 0 5px 0 rgba(0,0,0,0.25);
+}
+
+#menu-block > ul > li {
+    padding: 16px;
+}
+
+.error-length {
+    padding: 10px; 
+    text-align: center; 
+    background: rgb(37, 47, 57); 
+    border-radius: 4px; 
+    box-shadow: 2px 0 5px 0 rgba(0,0,0,0.25);
+    max-width: 590px;
+    margin: 0 auto;
+}
+
+#menu-block > ul > li:hover {
+    background: rgb(40, 53, 66);
+}
+
+.theme-list > li:hover {
+    background: rgb(52, 63, 74);
+}
+
+#menu-app {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgb(37, 47, 57);
+    color: rgb(248, 248, 249);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    left: 0;
+}
+
+/* 6. ARTICLE */
+/* ============================================================================================================== */
+#add-app {
+    background: rgb(37, 47, 57);
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin: 100px auto 20px auto;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    max-width: 620px;
+}
+
+.todo {
+    margin: 0;
+    padding: 0;
+}
+
+.todo > li {
+    background: rgb(37, 47, 57);
+    border-radius: 4px;
+    padding: 16px 0px 16px 16px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 15px;
+    margin: 0 0 30px 0;
+}
+
+.todo > li .basket{
+    color: rgb(216, 0, 0);
+    cursor: pointer;
+}
+
+.todo > li:last-of-type {
+    margin: 0;
+}
+
+#fihish-block, #imp-block {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.43);
+    top: 0;
+    left: 0;
+}
+
+#fihish-block > ul, #imp-block > ul {
+    margin: 30px auto 20px auto;
+    max-width: 590px;
+    padding: 0;
+}
+
+#fihish-block > ul li, #imp-block > ul li {
+    background: rgb(37, 47, 57);
+    border-radius: 4px;
+    padding: 16px 0px 16px 16px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 15px;
+    margin: 0 0 20px 0;
+}
+
+.text {
+    border: 2px solid rgb(52, 61, 71);
+    padding: 10px;
+    background: rgb(28, 38, 47);
+    border-radius: 4px;
+    margin: 10px 0px 0 0;
+    text-align: left;
+    width: 560px;
+    display: block;
+    word-break: break-all;
+}
+
+.base-l {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4px;
+}
+
+#form {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.37);
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0;
+    z-index: 10000;
+    left: 0;
+}
+
+.close-form, .close-fih,.close-imp, .tit {
+    background: rgb(0, 104, 171);
+    padding: 16px;
+    max-width: 620px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+.theme-list {
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+
+
+.is-active {
+    transform: rotate(180deg);
+}
+
+/* 7. FOOTER */
+/* ============================================================================================================== */
+
+/* 8. POPUP-MENU */
+/* ============================================================================================================== */
