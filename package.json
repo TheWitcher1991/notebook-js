@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "devtron": "^1.4.0",
-    "electron": "^6.0.2",
+    "electron": "^9.1.0",
     "electron-packager": "^14.0.4",
     "electron-winstaller": "^4.0.0",
     "glob": "^7.1.4",
